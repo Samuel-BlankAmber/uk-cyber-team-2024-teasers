@@ -63,9 +63,7 @@ require "pnglitch"
 
 PNGlitch.open("challenge.png") do |png|
   png.each_scanline do |line|
-    if line.filter_type == 1
-      line.graft 2
-    elsif line.filter_type == 2
+    if line.filter_type == 2
       line.graft 1
     end
   end
@@ -73,7 +71,9 @@ PNGlitch.open("challenge.png") do |png|
 end
 ```
 
-This is a pretty elegant solution - only 11 lines of Ruby! My original solution involved using a [PNG decoder I found online](https://github.com/yohhoy/picopdec) and altering how the scanline filters were applied.
+This is a pretty elegant solution - only 9 lines of Ruby! My original solution involved using a [PNG decoder I found online](https://github.com/yohhoy/picopdec) and altering how the scanline filters were applied.
+
+Edit: Credit to `velvetpulse` for pointing out that Filter 1 is missing from the original PNG. This means that the solve script can be simplified by 2 lines (compare `solve.rb` and `solve-improved.rb`).
 
 ![Restored Image](challenge-restored.png)
 
