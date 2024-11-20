@@ -1,5 +1,7 @@
 # UK Cyber Team 2024 Teaser Challenges
 
+## ⭐ If you found this repo useful, please star it! ⭐
+
 This repo contains writeups for all of the teaser challenges produced for the UK Cyber Team 2024 qualifiers.
 
 - Corrupted (Forensics)
